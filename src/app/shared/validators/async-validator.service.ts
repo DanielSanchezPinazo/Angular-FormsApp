@@ -22,9 +22,8 @@ export class AsyncValidatorService implements AsyncValidator {
 
       subscriber.next( null );
       subscriber.complete();
-    }).pipe(
-      delay(3000)
-    );
+    })
+      .pipe( delay(3000));
 
     return httpCallObservable;
   }
